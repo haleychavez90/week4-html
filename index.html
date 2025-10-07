@@ -62,9 +62,28 @@
             console.log(state);
         }
 
+        function createPetOwner(firstName, petName, petType) {
+            return {
+                firstName: firstName,
+                petName: petName,
+                petType: petType,
+                status() {
+                    return `${this.firstName} is the owner of a ${this.petType} named ${this.petName}.`;
+                },
+                describe() {
+                    return `This pet owner is named ${this.firstName} and has a ${this.petType} named ${this.petName}.`;
+                },
+                render() {
+                    return `<div><h2>${this.firstName}</h2><p>Pet Type: ${this.petType}</p><p>Pet Name: ${this.petName}</p></div>`;
+                }   
+            };
+        }
+
         document.getElementById("signup-form").addEventListener("submit", function(event) {
             event.preventDefault(); 
             saveForm();
+            const petOwner = createPetOwner(state.firstName, state.petName, state.petType);
+            console.log(petOwner.describe());
         });
     </script>
 </body>
