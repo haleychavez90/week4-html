@@ -8,6 +8,35 @@
     <title>Document</title>
 </head>
 <body>
+ <!-- Pets name, age, and species-->
+ <div id="pet-info">
+     <h2>Pet Information</h2>
+     <p id="pet-status"></p>
+ </div>
 
+    <!-- Buttons to interact with the pet -->   
+    <div id="pet-actions">
+        <button id="feed-btn">Feed</button>
+        <button id="play-btn">Play</button>
+        <button id="sleep-btn">Sleep</button>
+    </div>
+
+    <!-- Event listener for pet actions -->
+    <script>
+        document.getElementById("feed-btn").addEventListener("click", function() {
+            myPet.eat();
+            document.getElementById("pet-status").innerText = myPet.status();
+        });
+
+        document.getElementById("play-btn").addEventListener("click", function() {
+            myPet.play();
+            document.getElementById("pet-status").innerText = myPet.status();
+        });
+
+        document.getElementById("sleep-btn").addEventListener("click", function() {
+            myPet.sleep();
+            document.getElementById("pet-status").innerText = myPet.status();
+        });
+    </script>
 </body>
 </html>

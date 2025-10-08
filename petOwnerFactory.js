@@ -1,6 +1,7 @@
-
+// Proof of Life
 console.log("petOwnerFactory.js is loaded");
 
+// Create Pet Owner Function
 function createPetOwner(ownerName, petName, petType) {
 
     return {
@@ -13,5 +14,6 @@ function createPetOwner(ownerName, petName, petType) {
     };
 }
 
-console.log(createPetOwner("Alice", "Fluffy", "cat").describe());
+// Proof of Life
+console.log("petOwnerFactory.js has been executed");
 
